@@ -106,7 +106,10 @@ def monomerCoVarMatrix(coords):
 
 def monomerPCA(coords):
     cvMatrix = monomerCoVarMatrix(coords)
+    eigvalues, eigvectors = eig(cvMatrix)
+    PCs = np.dot(combine_dims(coords), eigvectors)
     
+    return PCs, eigvalues
 
 #polymer and run names for file access
 polys = list(["5o4u", "pilA4", "TTC1836"])
