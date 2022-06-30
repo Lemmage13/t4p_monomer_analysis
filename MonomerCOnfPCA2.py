@@ -125,3 +125,4 @@ for poly in polys:
         u = mda.Universe("{}_cg.psf".format(poly), "{}_Run_{}.dcd".format(poly,run))
         
         coords = monAlign(u, tStd, mStd)
+        PCA, eigenvalues = monomerPCA(coords)
