@@ -30,9 +30,7 @@ def monAlign(universe, timeStride, monStride):
     t = 0
     
     #prepare positions list (Coordinates Over Time)
-    global COT
     COT = list()
-    
     
     while t < len(u.trajectory):
         
